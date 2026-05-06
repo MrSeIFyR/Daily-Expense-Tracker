@@ -18,3 +18,10 @@ while True:
         expense = float(input("Add an expense: "))
         expenses.append(expense)
         print("Expense added successfully!")
+    if choice == 2:
+        if not expenses:
+            print("No expenses recorded yet.")
+        else:
+            print("Your expenses:")
+            for i in range(len(expenses)):
+                print(f"{i + 1}. {expenses[i]}")
