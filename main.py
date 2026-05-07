@@ -25,3 +25,14 @@ while True:
             print("Your expenses:")
             for i in range(len(expenses)):
                 print(f"{i + 1}. {expenses[i]}")
+    if choice == 3:
+        if not expenses:
+            print("No expenses recorded yet.")
+        else:
+            total_expense = 0
+            average_expense = 0
+            for index in expenses:
+                total_expense += index
+            average_expense = total_expense / len(expenses)
+            print(f"Total expense: {total_expense}")
+            print(f"Average expense: {average_expense}")
